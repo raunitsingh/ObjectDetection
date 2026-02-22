@@ -68,7 +68,7 @@ ObjectDetection/
 
 🚀 Running Detection
 
-
+```bash
 from engine.sahi_object_detection import SAHIObjectDetection
 
 detector = SAHIObjectDetection("models/yolo11m.pt")
