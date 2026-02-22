@@ -1,144 +1,75 @@
-🚀 YOLO-Based Object Detection System
+# 🚀 ObjectDetection
 
-A deep learning–powered real-time object detection system built using the YOLO (You Only Look Once) architecture. This project focuses on efficient, high-speed, and accurate detection suitable for practical deployment scenarios.
+A computer vision project focused on **real-time object detection**, **small object recognition**, and **scalable inference pipelines**.
 
+---
 
-📌 Overview
+## 📌 Overview
 
-Object detection is a fundamental computer vision task that involves:
+This repository contains implementations, experiments, and utilities related to modern **object detection systems**.
 
-✔ Identifying objects
-✔ Localizing objects (bounding boxes)
-✔ Classifying objects
+The project is designed for:
 
-This repository implements a YOLO-based detection pipeline optimized for:
+- 🛸 Drone Vision Applications  
+- 🎥 Surveillance & Monitoring  
+- 📷 Smart Camera Systems  
+- 🧠 Research & Experimentation  
+- ⚡ Real-Time Inference Pipelines  
 
-Real-time inference
+---
 
-High detection accuracy
+## ✨ Key Features
 
-Lightweight deployment
+✔ Real-time detection pipeline  
+✔ Small object detection optimization  
+✔ SAHI sliced inference support  
+✔ Modular & scalable architecture  
+✔ GPU / CPU compatible  
+✔ Easy integration with YOLO models  
 
-Scalable training workflows
+---
 
+## 🧠 Technologies Used
 
-🧠 Model Architecture
+| Category | Tools / Frameworks |
+|----------|-------------------|
+| **Language** | Python |
+| **Computer Vision** | OpenCV |
+| **Machine Learning** | PyTorch |
+| **Detection Models** | YOLO |
+| **Small Object Detection** | SAHI |
+| **Utilities** | NumPy, Matplotlib |
 
-This project utilizes the YOLO framework, known for:
+---
 
-Feature	                     Advantage
-Single-stage detection	    Faster inference
-End-to-end training	        Simpler pipeline
-Grid-based prediction	    Efficient localization
-Real-time capability	    Deployment friendly
-
-
-⚙️ Key Features
-
-✅ Real-time object detection
-✅ Bounding box visualization
-✅ Custom dataset training
-✅ Flexible inference pipeline
-✅ GPU acceleration support
-✅ Modular design
-
-
-🏗️ Project Structure
-├── dataset/
-├── models/
-├── weights/
-├── utils/
-├── detect.py
-├── train.py
-├── requirements.txt
-└── README.md
-
-
-📦 Installation
+## ⚙️ Installation
 
 Clone the repository:
-git clone https://github.com/yourusername/your-repo-name.git
-cd your-repo-name
 
-Install dependencies:
-pip install -r requirements.txt
-
-
-🖥️ System Requirements
-
-Component	           Recommended
-Python	                 3.8+
-GPU	                     NVIDIA CUDA-enabled (optional but preferred)
-RAM	                      8GB+
-Framework	              PyTorch / OpenCV
+```bash
+git clone https://github.com/raunitsingh/ObjectDetection.git
+cd ObjectDetection
 
 
 
-🚀 Running Inference
 
-▶ Detect Objects in Image
-python detect.py --source path/to/image.jpg --weights weights/best.pt
+📂 Project Structure
 
-▶ Detect Objects in Video
-python detect.py --source path/to/video.mp4 --weights weights/best.pt
-
-▶ Webcam Detection
-python detect.py --source 0 --weights weights/best.pt
-
-
-
-🏋️ Training the Model
-
-▶ Train on Custom Dataset
-
-python train.py \
-  --img 640 \
-  --batch 16 \
-  --epochs 50 \
-  --data dataset/data.yaml \
-  --weights yolov5s.pt
+ObjectDetection/
+│── models/                # Model weights (YOLO / trained models)
+│── engine/                # Detection & inference logic
+│── data/                  # Sample inputs / datasets
+│── outputs/               # Detection results
+│── notebooks/             # Experiments / analysis
+│── README.md
+│── requirements.txt
 
 
 
-🎯 Example Output
-
-✔ Bounding boxes
-✔ Class labels
-✔ Confidence scores
+🚀 Running Detection
 
 
+from engine.sahi_object_detection import SAHIObjectDetection
 
-⚡ Performance Characteristics
-
-YOLO models are optimized for:
-
-Aspect	                      Benefit
-Low latency	                Real-time usage
-High FPS	                Video applications
-Efficient computation	    Edge deployment
-End-to-end learning	        Simplified pipeline
-
-
-
-🚀 Future Improvements
-
-Multi-object tracking
-
-Model quantization
-
-Edge device optimization
-
-Deployment pipelines
-
-Federated learning support
-
-
-🤝 Contributions
-
-Contributions are welcome.
-
-Fork → Improve → Pull Request
-
-
-👨‍💻 Author
-Raunit Singh
+detector = SAHIObjectDetection("models/yolo11m.pt")
+predictions = detector.detect(frame)
