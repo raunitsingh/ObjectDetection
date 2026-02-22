@@ -46,7 +46,7 @@ The project is designed for:
 
 Clone the repository:
 
-```bash
+
 git clone https://github.com/raunitsingh/ObjectDetection.git
 cd ObjectDetection
 
