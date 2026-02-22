@@ -56,13 +56,13 @@ cd ObjectDetection
 📂 Project Structure
 
 ObjectDetection/
-│── models/ # Model weights (YOLO / trained models)
-│── engine/ # Detection & inference logic
-│── data/ # Sample inputs / datasets
-│── outputs/ # Detection results
-│── notebooks/ # Experiments / analysis
-│── README.md
-│── requirements.txt
+├── models/ # Model weights (YOLO / trained models)
+├── engine/ # Detection & inference logic
+├── data/ # Sample inputs / datasets
+├── outputs/ # Detection results
+├── notebooks/ # Experiments / analysis
+├── README.md
+└── requirements.txt
 
 
 
